@@ -25,5 +25,8 @@ public class Ventana2Controller {
 	}
 
 
+	public void ponerNumero(int numero) {
+		System.out.println(numero);
+	}
 	
 }

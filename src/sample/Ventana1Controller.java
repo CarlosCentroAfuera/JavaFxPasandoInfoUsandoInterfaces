@@ -19,6 +19,9 @@ public class Ventana1Controller {
 			BorderPane root = (BorderPane) loader.load();
 			Scene scene = new Scene(root,450,410);
 			stage.setScene(scene);
+
+			Ventana2Controller controller = loader.getController();
+			controller.ponerNumero(1);
 			// Oculta los botones de cerrar/minimizar/maximizar
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.show();
