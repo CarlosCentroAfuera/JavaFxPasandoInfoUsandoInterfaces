@@ -12,7 +12,7 @@ import javafx.stage.StageStyle;
 public class Ventana1Controller {
 
 	@FXML
-	private void onButtonAbrirClicked(ActionEvent event) {
+	private void onButtonAbrirClicked() {
 		try {
 			Stage stage = new Stage();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Ventana2.fxml"));
@@ -22,16 +22,10 @@ public class Ventana1Controller {
 			// Oculta los botones de cerrar/minimizar/maximizar
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.show();
-
-			Ventana2Controller controller = loader.getController();
-			controller.mandarInfoDesdeVentana1("BLABLALBALBLABLALBAB");
-			controller.setVentana1(this);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void recibirInformacion(String info){
-		System.out.println("Informacion recibida en ventana 1 de la ventana 2 = " + info);
-	}
+
 }
