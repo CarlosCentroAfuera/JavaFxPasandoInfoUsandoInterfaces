@@ -1,10 +1,8 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -21,7 +19,7 @@ public class Ventana1Controller {
 			stage.setScene(scene);
 
 			Ventana2Controller controller = loader.getController();
-			controller.ponerNumero(1);
+			controller.ponerNumeroEnVentana2(1);
 			// Oculta los botones de cerrar/minimizar/maximizar
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.show();

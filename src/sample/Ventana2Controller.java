@@ -25,8 +25,10 @@ public class Ventana2Controller {
 	}
 
 
-	public void ponerNumero(int numero) {
-		System.out.println(numero);
+	public void ponerNumeroEnVentana2(int numero) {
+		System.out.println("Soy la ventana 2 y he recibido un " + numero);
 	}
-	
+
+
+
 }
