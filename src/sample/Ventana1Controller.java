@@ -18,14 +18,19 @@ public class Ventana1Controller {
 			Scene scene = new Scene(root,450,410);
 			stage.setScene(scene);
 
-			Ventana2Controller controller = loader.getController();
-			controller.ponerNumeroEnVentana2(1);
+			Ventana2Controller controllerVentana2 = loader.getController();
+			controllerVentana2.ponerNumeroEnVentana2(1);
+			controllerVentana2.enviarController1(this);
 			// Oculta los botones de cerrar/minimizar/maximizar
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void ponerStringEnVentana1(String texto){
+		System.out.println("He recibido el siguiente text = " + texto);
 	}
 
 

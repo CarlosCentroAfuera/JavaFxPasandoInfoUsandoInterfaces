@@ -12,7 +12,9 @@ public class Ventana2Controller {
 	private Button buttonCerrarVentana;
 	@FXML
 	private Button buttonCerrarApp;
-	
+
+	private Ventana1Controller controllerVentana1;
+
 	@FXML
 	private void onButtonCerrarVentanaClicked() {
 	    Stage stage = (Stage) buttonCerrarVentana.getScene().getWindow();
@@ -29,6 +31,13 @@ public class Ventana2Controller {
 		System.out.println("Soy la ventana 2 y he recibido un " + numero);
 	}
 
+	@FXML
+	private void onButtonPasarInfoClicked() {
+		System.out.println("He recibido el click en la ventana 2 y quiero pasar info a la ventana 1");
+		controllerVentana1.ponerStringEnVentana1("Hola");
+	}
 
-
+	public void enviarController1(Ventana1Controller ventana1Controller) {
+		controllerVentana1 = ventana1Controller;
+	}
 }

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana2Controller">
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana2Controller">
 	<opaqueInsets>
 		<Insets />
 	</opaqueInsets>
@@ -25,4 +25,7 @@
 			</BorderPane.margin>
 		</Button>
 	</left>
+	<top>
+		<Button mnemonicParsing="false" onMouseClicked="#onButtonPasarInfoClicked" text="Enviar Info a Ventana 1" BorderPane.alignment="CENTER" />
+	</top>
 </BorderPane>
