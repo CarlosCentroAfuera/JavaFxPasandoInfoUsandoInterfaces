@@ -3,11 +3,22 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Ventana1Controller {
+
+	Persona persona = new Persona("Rodolfo", 55);
+
+	@FXML
+	Label labelNombre, labelEdad;
+
+	@FXML
+	public void initialize(){
+		actualizarUi();
+	}
 
 	@FXML
 	private void onButtonAbrirClicked() {
@@ -19,7 +30,7 @@ public class Ventana1Controller {
 			stage.setScene(scene);
 
 			Ventana2Controller controllerVentana2 = loader.getController();
-			controllerVentana2.ponerNumeroEnVentana2(1);
+			controllerVentana2.enviarPersona(persona);
 			controllerVentana2.enviarController1(this);
 			// Oculta los botones de cerrar/minimizar/maximizar
 			stage.initStyle(StageStyle.UNDECORATED);
@@ -29,8 +40,9 @@ public class Ventana1Controller {
 		}
 	}
 
-	public void ponerStringEnVentana1(String texto){
-		System.out.println("He recibido el siguiente text = " + texto);
+	public void actualizarUi(){
+		labelNombre.setText(persona.nombre);
+		labelEdad.setText(String.valueOf(persona.edad));
 	}
 
 

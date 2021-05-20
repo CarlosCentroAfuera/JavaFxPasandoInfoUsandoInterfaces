@@ -26,6 +26,6 @@
 		</Button>
 	</left>
 	<top>
-		<Button mnemonicParsing="false" onMouseClicked="#onButtonPasarInfoClicked" text="Enviar Info a Ventana 1" BorderPane.alignment="CENTER" />
+		<Button mnemonicParsing="false" onMouseClicked="#onButtonEnvejecerlicked" text="Envejecer" BorderPane.alignment="CENTER" />
 	</top>
 </BorderPane>

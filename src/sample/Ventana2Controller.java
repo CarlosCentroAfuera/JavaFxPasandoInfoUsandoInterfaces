@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -15,6 +14,8 @@ public class Ventana2Controller {
 
 	private Ventana1Controller controllerVentana1;
 
+
+	Persona persona;
 	@FXML
 	private void onButtonCerrarVentanaClicked() {
 	    Stage stage = (Stage) buttonCerrarVentana.getScene().getWindow();
@@ -27,14 +28,14 @@ public class Ventana2Controller {
 	}
 
 
-	public void ponerNumeroEnVentana2(int numero) {
-		System.out.println("Soy la ventana 2 y he recibido un " + numero);
+	public void enviarPersona(Persona persona) {
+		this.persona = persona;
 	}
 
 	@FXML
-	private void onButtonPasarInfoClicked() {
-		System.out.println("He recibido el click en la ventana 2 y quiero pasar info a la ventana 1");
-		controllerVentana1.ponerStringEnVentana1("Hola");
+	private void onButtonEnvejecerlicked() {
+		persona.edad++;
+		controllerVentana1.actualizarUi();
 	}
 
 	public void enviarController1(Ventana1Controller ventana1Controller) {
