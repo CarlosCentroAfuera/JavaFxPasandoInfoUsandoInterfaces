@@ -12,7 +12,7 @@ public class Ventana2Controller {
 	@FXML
 	private Button buttonCerrarApp;
 
-	private Ventana1Controller controllerVentana1;
+	private ComponenteUIActualizable componenteUIActualizable;
 
 
 	Persona persona;
@@ -35,10 +35,11 @@ public class Ventana2Controller {
 	@FXML
 	private void onButtonEnvejecerlicked() {
 		persona.edad++;
-		controllerVentana1.actualizarUi();
+		componenteUIActualizable.actualizarUi();
 	}
 
-	public void enviarController1(Ventana1Controller ventana1Controller) {
-		controllerVentana1 = ventana1Controller;
+	public void enviarController1(ComponenteUIActualizable componenteUIActualizable) {
+		this.componenteUIActualizable = componenteUIActualizable;
 	}
+
 }

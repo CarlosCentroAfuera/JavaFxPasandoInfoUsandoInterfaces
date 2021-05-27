@@ -8,7 +8,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class Ventana1Controller {
+interface ComponenteUIActualizable {
+	void actualizarUi();
+}
+
+public class Ventana1Controller implements ComponenteUIActualizable {
 
 	Persona persona = new Persona("Rodolfo", 55);
 
@@ -40,6 +44,7 @@ public class Ventana1Controller {
 		}
 	}
 
+	@Override
 	public void actualizarUi(){
 		labelNombre.setText(persona.nombre);
 		labelEdad.setText(String.valueOf(persona.edad));
